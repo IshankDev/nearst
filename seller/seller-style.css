@@ -1,0 +1,432 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+nav{
+    width: 100%;
+    height: 17vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px 60px ;
+    transition: 1s;
+    z-index: 100;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    font-size: 15px;
+    color: #707070;
+    font-family: 'Segoe UI', sans-serif;
+}
+nav ul li{
+    position: relative;
+    cursor: pointer;
+}
+nav ul li a{
+    color: #707070;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+nav ul li span{
+    width: 0%;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+nav ul li:hover > span{
+    width: 50%;
+}
+nav ul li.active span{
+    width: 100%;
+}
+
+.hamburger{
+    height: 2.5vh;
+    /* margin:2.4vh 10px; */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.hamburger div{
+    width: 23px;
+    height: 3px;
+    background-color: #085076;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.ham-active.hamburger .line1{
+    transform:translate(0px,1vh) rotateZ(45deg);
+    width: 23px;
+    background-color: #085076;
+}
+.ham-active.hamburger .line2{
+    opacity: 0;
+}
+.ham-active.hamburger .line3{
+    width: 23px;
+    transform:translate(0px,-1vh) rotateZ(-45deg) ;
+    background-color: #085076;
+}
+.modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top:20vh;
+    left: 0;
+    z-index: 99 ;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.modal-active{
+    opacity: 1;
+    pointer-events: all;
+}
+nav.scroll{
+    height: 7vh;
+    box-shadow: 0px 4px 20px #e9e9e9;
+    background-color: white;
+}
+.logo{
+    height: 11vh;
+    transition: 1s;
+}
+.logo img{
+    height: 11vh;
+    transition: 1s;
+}
+nav.scroll .logo, nav.scroll .logo img{
+    height: 7vh;
+}
+.content{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFF3F6;
+    box-sizing: border-box;
+    
+    display: flex;
+}
+.content .left, .content .right{
+    width: 50%;
+    padding-top: 23vh;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+.content .left{
+    padding-left: 5%;
+}
+.content .right{
+    background-color: white;
+    padding-right:  3%;
+    padding-left:  3%;
+    box-sizing: border-box;
+}
+.content .right h1{
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #085078;
+    text-align: center;
+    font-weight: 100;
+}
+.right .points{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 10%;
+}
+.points .row{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .each{
+    width: 50%;
+}
+.each .head{
+    color: #085078;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 7px 0;
+}
+.each .desc{
+    width: 90%;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+.content p{
+    font-family: 'Segoe UI', sans-serif;
+    margin: 5px 0;
+    /* margin-top: 25vh; */
+    width: 100%;
+    font-weight: 100;
+}
+.content .right p{
+    width: 70%;
+    margin: 30px auto;
+    color: #085078;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+form{
+    width: 90%;
+    height: 60vh;
+    padding-top: 20px;
+}
+.form{
+    display: flex;
+    height: 37vh;
+}
+.form > div{
+    position: relative;
+    width: 48.5%;
+    margin-right: 3%;
+}
+.form > div > div{
+    position: relative;
+    height: 23%;
+    width: 100%;
+    margin-bottom: 3%;
+    background-color: white;
+    overflow: hidden;
+}
+form .big{
+    display: block;
+    height: 100%;
+}
+form .big > div{
+    position: relative;
+    height: 23%;
+    width: 100%;
+    margin-bottom: 3%;
+    background-color: white;
+    overflow: hidden;
+}
+form .big > div.txtarea{
+    height: 49%;
+    margin-top: 0;
+}
+form .big > div.txtarea label{
+    top: 10px;
+}
+form .button{
+    text-align: center;
+    margin-top: 4vh;
+}
+form button{
+    border: none;
+    padding: 5px 60px;
+    color: white;
+    background-color: #085078;
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.txtarea{
+    height: 100px;
+    width: 97%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+.txtarea textarea{
+    margin: 30px 0;
+}
+input,textarea{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 25px);
+    margin-top: 25px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #085078;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+label{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.tag{
+    width: 100%;
+    height: 120px;
+    background: -webkit-linear-gradient(bottom, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
+    background: -o-linear-gradient(bottom, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
+    background: -ms-linear-gradient(bottom, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
+    background: -moz-linear-gradient(bottom, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
+    background: linear-gradient(to top, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.tag p{
+    margin: 2px;
+}
+.contact{
+    width: 100%;
+    background-color: white;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+.contact .right, .contact .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contact .left{
+    margin-top: 50px;
+}
+.contact .left a{
+    color: black;
+    text-decoration: none;
+}
+.contact .social{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.contact .social div{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+@keyframes slideLink{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:1000px){
+    .content{
+        flex-direction: column-reverse;
+    }
+    .content .left, .content .right{
+        width: 100%;
+    }
+    .content .left{
+        padding-top: 2vh;
+    }
+    form{
+        height: 120vh;
+    }
+    .form{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .form > div{
+        width: 100%;
+    }
+    form .big{
+        margin-top: 20px;
+        height: 50%;
+    }
+    .txtarea{
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .tag{
+        font-size: 1.2em;
+        margin: 0;
+        padding:0;
+        text-align: center;
+    }
+    .tag div{
+        width: 100%;
+    }
+    .contact{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:800px){
+    nav{
+        padding: 20px;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        bottom: 0vh;
+        transform: translateY(100%);
+        margin: 0;
+        flex-direction: column;
+        width:100%;
+        background-color: white;
+        overflow: hidden;
+        height: 0vh;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    nav ul li{
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    nav.nv-active{
+        background-color: white;
+    }
+    nav.nv-active > ul{
+        height: 40vh;
+    }
+    .hamburger{
+        display: flex;
+    }
+}

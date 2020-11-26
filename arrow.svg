@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.188" height="35.099" viewBox="0 0 37.188 35.099">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f10911"/>
+      <stop offset="0.482" stop-color="#085078"/>
+      <stop offset="0.515" stop-color="#085078"/>
+      <stop offset="0.559" stop-color="#085078"/>
+      <stop offset="0.586" stop-color="#085078"/>
+      <stop offset="0.643" stop-color="#085078"/>
+      <stop offset="0.713" stop-color="#085078"/>
+      <stop offset="0.76" stop-color="#085078"/>
+      <stop offset="0.874" stop-color="#085078"/>
+      <stop offset="1" stop-color="#085078"/>
+    </linearGradient>
+  </defs>
+  <path id="Polygon_1" data-name="Polygon 1" d="M15.5,0,31,36H0Z" transform="matrix(0.017, 1, -1, 0.017, 36.647, 1.555)" fill="url(#linear-gradient)"/>
+  <g id="Polygon_2" data-name="Polygon 2" transform="translate(5.999) rotate(89)" fill="#fff">
+    <path d="M 32.0000114440918 5.5 L 2.999991178512573 5.5 L 17.50000190734863 0.5285677313804626 L 32.0000114440918 5.5 Z" stroke="none"/>
+    <path d="M 17.50000190734863 1.057145595550537 L 6.000009536743164 5 L 28.9999942779541 5 L 17.50000190734863 1.057145595550537 M 17.50000190734863 0 L 35 6 L 3.814697265625e-06 6 L 17.50000190734863 0 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>
