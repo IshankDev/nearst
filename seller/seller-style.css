@@ -43,7 +43,7 @@ nav ul li a{
 nav ul li span{
     width: 0%;
     height: 2px;
-    background-color: blue;
+    background-color: #085076;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -366,18 +366,30 @@ input[type=number] {
         padding-top: 2vh;
     }
     form{
-        height: 120vh;
+        height: 800px;
     }
     .form{
         flex-direction: column;
-        height: 80vh;
+        height: auto;
     }
     .form > div{
         width: 100%;
+        height: auto;
+    }
+    .form > div > div{
+        height: 60px;
+        margin-bottom: 10px;
     }
     form .big{
-        margin-top: 20px;
-        height: 50%;
+        height: auto;
+    }
+    form .big > div{
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    form .big > div.txtarea, .txtarea{
+        height: 120px;
+        margin-bottom: 10px;
     }
     .txtarea{
         margin-top: 0;
