@@ -5,7 +5,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    min-height: 150vh;
+    min-height: 100vh;
 }
 nav{
     width: 100%;
@@ -19,27 +19,9 @@ nav{
     align-items: center;
     padding: 20px 60px ;
     transition: 1s;
-    
     z-index: 100;
 }
-.phone{
-    position: absolute;
-    right: 10%;
-    height: 75vh;
-    top: 0;
-    width: fit-content;
-    transform: translateY(20%);
-}
-.landing .phone img{
-    position: absolute;
-    top:50%;
-    left:50%;
-    width: 90%;
-    transform: translate(-50%,-50%);
-}
-.phone svg{
-    height: 100%;
-}
+
 nav ul{
     list-style: none;
     display: flex;
@@ -103,20 +85,27 @@ nav ul li.active span{
     transform:translate(0px,-1vh) rotateZ(-45deg) ;
     background-color: #085076;
 }
+.modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top:20vh;
+    left: 0;
+    z-index: 99 ;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.modal-active{
+    opacity: 1;
+    pointer-events: all;
+}
 nav.scroll{
     height: 7vh;
-    background-color: white;
     box-shadow: 0px 4px 20px #e9e9e9;
+    background-color: white;
 }
-.back{
-    position: absolute;
-    bottom: 50%;
-    height: 10vh;
-    right:-20%;
-    z-index: -5;
-    display: none;
-}
-
 .logo{
     height: 11vh;
     transition: 1s;
@@ -127,142 +116,116 @@ nav.scroll{
 }
 nav.scroll .logo, nav.scroll .logo img{
     height: 7vh;
-    background-color: white;
 }
-.landing{
+.content{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFF3F6;
     box-sizing: border-box;
-    padding-left: 5%;
+    
+    display: flex;
 }
-.landing .content{
-    margin-top: 40vh;
-    height: 60vh;
-}
-.landing .content h1{
-    color: #085076;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    margin: 10px 0;
-    font-size: 2em;
-}
-.landing .content p{
-    margin: 5px 0;
-    font-size: 17px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-.landing .content .app p{
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    letter-spacing: normal;
-    color: #707070;
-    text-align: center;
-}
-.landing .small{
-    margin-top: 40px;
-    /* margin-left: 20px; */
-    font-size: 13px;
-    font-family: 'Segoe UI', sans-serif;
-}
-.landing img{
-    width: 200px;
-}
-.app{
-    width: 200px;
-    margin-top: 50px;
-    margin-left: 20px;
-}
-.details .head{
-    text-align: center;
-}
-.details h1{
-    color: #085076;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    display: inline-block;
-    margin: 10px auto;
-    font-size: 1.7em;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
+.content .left, .content .right{
+    width: 50%;
+    padding-top: 23vh;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
-.details h1 span, .card-container span{
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0%;
-    transition: 2s;
-    background-color: #085076;
-    height: 2px;
-}
-.details h1 span.active{
-    width: 100%;
-}
-.card-container span{
-    width: 0px;
-    transition: 0.5s;
-}
-.card-container:hover{
-    transform: translateY(-10px);
-    box-shadow: 0px 0px 10px 1px rgb(180, 180, 180);
-}
-.card-container:hover span{
-    width: 40px;
-}
-.details .content{
-    min-height: 70vh;
-    padding: 5% 10%;
+.content .left{
     
-    text-align: center;
 }
-.card-container{
-    width: 300px;
-    vertical-align: top;
-    height: 300px;
-    transition: 0.5s;
-    margin: 15px;
+.content .left h1{
     text-align: center;
-    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #085076;
+}
+.content .right{
+    background-color: white;
     box-sizing: border-box;
-    padding: 40px 20px;
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px 1px rgb(180, 180, 180);
 }
-.card-container .icon{
-    width: 50px;
-    height: 50px;
+.content .right img{
+    width: 70%;
+    margin: auto 15%;
+}
+.content p{
+    font-family: 'Segoe UI', sans-serif;
+    margin: 5px 0;
+    /* margin-top: 25vh; */
+    width: 100%;
+    font-weight: 100;
+}
+
+form{
+    width: 100%;
+    height: 60vh;
+    padding-top: 20px;
+}
+.form{
+    display: flex;
+    height: 25vh;
+}
+.form > div{
+    position: relative;
+    width: 350px;
     margin: auto;
 }
-.card-container .main{
-    text-align: center;
-    display: inline-block;
-    margin: 30px 0;
-    font-family: 'Josefin Sans' , sans-serif;
-    color: #085076;
-    font-size: 1.2em;
+.form > div > div{
     position: relative;
-}
-.card-container .sub{
-    font-family: 'Segoe UI', sans-serif;
-    color: #707070;
-}
-.card-container svg{
-    height: 100%;
+    height: 60px;
     width: 100%;
+    margin-bottom: 3%;
+    background-color: white;
+    overflow: hidden;
+    
 }
-#card1:hover > .icon > svg  #out{
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: rotate 4s linear  infinite ;
+form .button{
+    text-align: center;
+    margin-top: 4vh;
+}
+form button{
+    border: none;
+    padding: 5px 60px;
+    color: white;
+    background-color: #085078;
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+input{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 25px);
+    margin-top: 25px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #085078;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+label{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
-@keyframes rotate{
-    to{
-        transform: rotateZ(360deg);
-    }
-}
-.details .tag{
+.tag{
     width: 100%;
     height: 120px;
     background: -webkit-linear-gradient(bottom, rgb(193, 75, 138) 0%, rgb(235, 92, 122) 100%);
@@ -278,7 +241,7 @@ nav.scroll .logo, nav.scroll .logo img{
     padding-left: 5%;
     box-sizing: border-box;
 }
-.details .tag p{
+.tag p{
     margin: 2px;
 }
 .contact{
@@ -315,22 +278,6 @@ nav.scroll .logo, nav.scroll .logo img{
     border: 1px solid black;
     border-radius: 50%;
 }
-.modal{
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    top:20vh;
-    left: 0;
-    z-index: 99 ;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-.modal-active{
-    opacity: 1;
-    pointer-events: all;
-}
 @keyframes slideLink{
     from{
 
@@ -340,13 +287,14 @@ nav.scroll .logo, nav.scroll .logo img{
         transform: translateY(0);
     }
 }
-@media screen and (max-width:1100px){
-    .phone{
-        right: 1%;
+@media screen and (max-width:1000px){
+    .content .left{
+        width: 100%;
     }
-    .landing .content h1{
-        font-size: 1.6em;
+    .content .right{
+        display:none;
     }
+
 }
 @media screen and (max-width:800px){
     nav{
@@ -379,47 +327,5 @@ nav.scroll .logo, nav.scroll .logo img{
     }
     .hamburger{
         display: flex;
-    }
-    .landing{
-        padding: 0;
-    }
-    .landing .content{
-        margin-top: 65vh;
-        text-align: center;
-    }
-    .landing .content h1{
-        font-size: 1.4em;
-    }
-    .landing .content p{
-        font-size: 16px;
-    }
-    .phone{
-        height: 40vh;
-        top: 20vh;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .app{
-        text-align:center;
-        width: 100%;
-        margin:20px 0;
-    }
-    .landing .small{
-        text-align: center;
-    }
-    .details .tag{
-        font-size: 1.2em;
-        margin: 0;
-        padding:0;
-        text-align: center;
-    }
-    .details .tag div{
-        width: 100%;
-    }
-    .details .contact{
-        font-size: 12px;
-    }
-    .details .content{
-        padding: 5% 0%;
     }
 }
