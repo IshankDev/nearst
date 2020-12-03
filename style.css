@@ -262,6 +262,82 @@ nav.scroll .logo, nav.scroll .logo img{
         transform: rotateZ(360deg);
     }
 }
+@keyframes coin{
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+#card2:hover .pin{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bounce;
+    -webkit-animation-name:bounce ;
+}
+#card3:hover #Group_1{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: coin 1s linear  infinite ;
+}
+#card4:hover #de_Group_3{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: rotate 4s linear  infinite ;
+}
+#card5:hover #delivery{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: move 1s linear  infinite ;
+}
+#card6:hover svg{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: boomer 2s linear  infinite ;
+}
+@keyframes boomer{
+    50%{
+        transform: rotateZ(90deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+@keyframes move{
+    50%{
+        transform: translateX(100%);
+    }
+    51%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-10px);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
 .details .tag{
     width: 100%;
     height: 120px;
