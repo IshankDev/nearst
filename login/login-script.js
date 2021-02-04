@@ -69,7 +69,7 @@ const loginFn = (data)=>{
                 console.log(this.responseText)
                 localStorage.setItem('nearstuser',JSON.stringify(respData.user));
                 localStorage.setItem('nearstToken',JSON.stringify(respData.token));
-                window.location.href = './dashboard.html'
+                window.location.href = '../dashboard/index.html'
                 // errBox("");
             }
 
