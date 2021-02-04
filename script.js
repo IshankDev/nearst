@@ -1,5 +1,10 @@
 
 const scroll = ()=>{
+    const log = localStorage.getItem('nearstToken')
+    if(log && log!==""){
+        document.querySelector('#log').innerHTML='Dashboard'
+        document.querySelector('#log').href='./dashboard/index.html'
+    }
     const nav = document.querySelector('nav')
     if(window.scrollY > 50){
         nav.classList.add('scroll')
