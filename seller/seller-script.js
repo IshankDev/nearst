@@ -1,6 +1,8 @@
 
 const scroll = ()=>{
-    if(log && log!==""){
+    loged=localStorage.getItem("nearstToken")
+    console.log(loged)
+    if(loged){
         document.querySelector('#log').innerHTML='Dashboard'
         document.querySelector('#log').href='../dashboard/index.html'
     }
