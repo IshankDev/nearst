@@ -7,9 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./contact-style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Nearst || contact us</title>
 </head>
 <body>
+    <div id="popup">We have recieved your Inquiry. We will reach out to you as soon as possible.</div>
     <nav>
         <div class="logo">
               <img src="../logo.svg" alt="">       
@@ -34,20 +36,20 @@
                 <div>
                     <div>
                         <label for="name">Your Name</label>
-                        <input type="text" name="name" id="">
+                        <input type="text" name="name" id="name">
                     </div>
                     <div>
                         <label for="number">Mobile Number</label>
-                        <input type="number" style="font-weight: 700;" name="number" id="">
+                        <input type="number" style="font-weight: 700;" name="number" id="number">
                     </div>
                     <div>
                         <label for="email">Email Id</label>
-                        <input type="email" name="email" id="">
+                        <input type="email" name="email" id="mail">
                     </div>
                 </div>
                 <div class="big">
                     <label for="more">Tell Us More Here</label>
-                    <textarea name="more" id="" cols="30" rows="10"></textarea>
+                    <textarea name="more" id="message" cols="30" rows="10"></textarea>
                 </div>
             </div>
             <div class="button"><button>Submit</button></div>
@@ -70,10 +72,16 @@
                 <div class="txt">Product By Dhravya Technologies Pvt. Ltd.</div>
         </div>
         <div class="left">
+            <a href="../returns/returns.html">Returns & Refund Policy</a>
             <a href="../terms/terms.html">Terms Of Services</a>
             <a href="../privacy/privacy.html">Privacy Policy</a>
         </div>
     </div>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_F3XpZR70TA52TAReYugnq");
+        })();
+        </script>
     <script src="./contact-script.js"></script>
 </body>
 </html>

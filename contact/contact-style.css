@@ -244,6 +244,46 @@ input[type=number] {
 .contact .left{
     margin-top: 50px;
 }
+.success#popup{
+    background-color: rgba(19, 105, 19, 0.836);
+    animation: pop 5s;
+}
+.error#popup{
+    background-color: rgba(218, 50, 50, 0.822);
+    animation: pop 5s;
+}
+#popup{
+    position: fixed;
+    top:10vh;
+    left: 50%;
+    transform: translate(-50%,-10px);
+    color: white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    z-index: 100000;
+    transform: translate(-50%,-10px);
+    opacity: 0;
+    max-width: 90%;
+}
+@keyframes pop{
+    0%{
+    transform: translate(-50%,-10px);
+        opacity: 0;
+    }
+    10%{
+        transform: translate(-50%,0px);
+        opacity: 1;
+    }
+    90%{
+        transform: translate(-50%,0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%,-10px);
+        opacity: 0;
+    }
+}
 .contact .left a{
     color: black;
     text-decoration: none;
