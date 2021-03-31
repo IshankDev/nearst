@@ -106,6 +106,14 @@ nav.scroll{
     opacity: 1;
     pointer-events: all;
 }
+.dets{
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
 .logo{
     height: 11vh;
     transition: 1s;
@@ -119,7 +127,7 @@ nav.scroll .logo, nav.scroll .logo img{
 }
 .content{
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(110vh );
     background-color: #EFF3F6;
     box-sizing: border-box;
     overflow: hidden;
@@ -202,7 +210,44 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+.dets h1{
+    margin:5px 0;
+}
+.dets div{
+    text-align: left;
+    font-family: 'Roboto',sans-serif;
+    display: inline-block;
+}
+.dets .flex{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.dets .location{
+    width: 100%;
+    padding-right: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.dets .email, .dets .number{
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+.dets .number{
+    text-align: right;
+    margin-right:49%;
+}
+.dets i{
+    font-size: 1.5em;
+    color: #085076;
+    margin: 5px 10px;
+    display: inline-block;
+    height: 100%;
+}
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
@@ -393,5 +438,28 @@ input[type=number] {
     .form{
         height: 45vh;
     }
-
+    .dets{
+        padding:0;
+        text-align: center;
+    }
+    .dets .location{
+        padding-right: 0;
+    }
+    .dets .flex{
+        display: block;
+        align-items: center;
+    }
+    .dets .flex div{
+        display: inline-block;
+    }
+    .dets div{
+        width: 100% !important; 
+        text-align: center;
+    }
+    .dets .number{
+        padding-right: 0;
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+    }
 }
